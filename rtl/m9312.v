@@ -25,11 +25,11 @@ module m9312
 	wire select = select_lo | select_hi;
 
 	initial begin
-		$readmemh("m9312.rom", rom1);
-		$readmemh("m9312_DK.rom", rom2, 0, 'o77);
-		$readmemh("m9312_DD.rom", rom2, 'o100, 'o177);
-		$readmemh("m9312_empty.rom", rom2, 'o200, 'o277);
-		$readmemh("m9312_empty.rom", rom2, 'o300, 'o377);
+		$readmemh("../../../rom/m9312.rom", rom1);
+		$readmemh("../../../rom/m9312_DK.rom", rom2, 0, 'o77);
+		$readmemh("../../../rom/m9312_DD.rom", rom2, 'o100, 'o177);
+		$readmemh("../../../rom/m9312_empty.rom", rom2, 'o200, 'o277);
+		$readmemh("../../../rom/m9312_empty.rom", rom2, 'o300, 'o377);
 	end
 
 	reg [15:0] ssyndly;	// TODO: SENSITIVE to clock

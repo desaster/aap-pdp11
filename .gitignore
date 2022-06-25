@@ -1,0 +1,4 @@
+target/*/project/*
+!target/*/project/*.qpf
+!target/*/project/*.qsf
+!target/*/project/*.sdc

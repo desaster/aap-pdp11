@@ -1,0 +1,4 @@
+root = true
+
+[*.{v,vh,sv,svh}]
+indent_style = tab

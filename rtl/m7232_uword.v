@@ -60,7 +60,7 @@ module m7232_uword(
 );
 
 	reg [56:0] rom[0:255];
-	initial $readmemh("ucode_40_base.rom", rom);
+	initial $readmemh("../../../rom/ucode_40_base.rom", rom);
 	reg [8:0] upp;
 	wire [56:0] romdata = upp[8] ? 0 : rom[upp[7:0]];
 	wire [56:0] bus_u = romdata | bus_u_in;

@@ -66,7 +66,7 @@ module videogen(
 	wire hsync_start = pixelH == 736;
 	wire hsync_mid = pixelH == 760;
 	wire hsync_end = pixelH == 790;
-	initial $readmemh("vt52char.rom", chars);
+	initial $readmemh("../../../rom/vt52char.rom", chars);
 	wire [10:0] charaddr = {membuf[6:0], charY[3:1]};
 	wire [8:0] charline = charY[4] ? 0 : {1'b0, chars[charaddr], 1'b0};
 	wire fetch = dataEnable && charX==8 || hsync_mid || hsync_end;

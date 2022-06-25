@@ -87,7 +87,7 @@ module m7236_kt11(
 		ps_p1_p3 & sps_2_0_eq_7 & ~inh_ps_clk1 & ~inh_ps_clk2;
 	assign inh_ps_clk2 = ~rom_c & ps[15];
 	reg [3:0] ktrom[0:255];
-	initial $readmemh("ucode_40_kt.rom", ktrom);
+	initial $readmemh("../../../rom/ucode_40_kt.rom", ktrom);
 	wire [3:0] rom_out = bupp[8] ? 4'o00 : ~ktrom[bupp[7:0]];
 	reg rom_a, rom_b, rom_c, rom_d;
 	wire [15:0] busrd_ps;

@@ -243,8 +243,8 @@ wire ovfl = 0;
 	// ROM
 	reg [56:0] rom1[0:255];
 	reg [80:57] rom2[0:255];
-	initial $readmemh("ucode_40_ke.rom", rom1);
-	initial $readmemh("ucode_40_eis.rom", rom2);
+	initial $readmemh("../../../rom/ucode_40_ke.rom", rom1);
+	initial $readmemh("../../../rom/ucode_40_eis.rom", rom2);
 	// this is a bit simplified but it works fine
 	assign bus_u = eupp[8] ? rom1[eupp[7:0]] : 0;
 	wire [80:57] erom = eupp[8] ? rom2[eupp[7:0]] : 0;
